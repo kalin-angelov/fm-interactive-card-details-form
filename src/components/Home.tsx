@@ -23,7 +23,7 @@ const Home = () => {
                     <article>
                         <h2>Jane Applessed</h2>
 
-                        <p>00/00</p>
+                        <p>{cardNumber}</p>
                     </article>
 
                 </section>
