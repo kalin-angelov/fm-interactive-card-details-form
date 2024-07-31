@@ -1,0 +1,13 @@
+@media screen and (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+        "cardImg form";
+        grid-template-columns: 380px 1fr;
+    }
+}
+@media screen and (min-width: 1440px) {
+    main {
+        grid-template-columns: 478px 1fr;
+    }
+}
