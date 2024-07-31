@@ -1,0 +1,132 @@
+form {
+    margin-top: 90px;
+    padding: 0 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        border: unset;
+
+        label {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin: 10px 0; 
+        }
+
+        input {
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            font-size: 18px;
+
+            &::placeholder {
+                color: #c7c6c9;
+            }
+        }
+    }
+
+    .card-user-field, .card-number-field {
+        input {
+            width: 330px;
+            height: 45px;
+        }
+    }
+
+   
+    .card-date-field {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .labels {
+            label {
+                &:nth-last-child(1) {
+                    padding-left: 20px;
+                } 
+            }
+        }
+
+        .inputs {
+            display: flex;
+            gap: 10px;
+            input {
+                width: 70px;
+                &:nth-last-child(1) {
+                    width: 163px;
+                }
+            }
+    
+        }
+
+        .date-input-error {
+            display: flex;
+            gap: 50px;
+        }
+
+    }
+
+    button {
+        margin: 25px 0;
+    }
+
+    .error {
+        color: red;
+        font-size: 14px;
+        align-self: self-start;
+    }
+
+}   
+
+@media screen and (min-width: 1024px) {
+    form {
+
+        .card-user-field, .card-number-field {
+            input {
+                width: 382px;
+            }
+        }
+
+        .card-date-field {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            .labels {
+                label {
+                    &:nth-last-child(1) {
+                        padding-left: 50px;
+                    } 
+                }
+            }
+    
+            .inputs {
+                display: flex;
+                gap: 10px;
+                input {
+                    width: 80px;
+                    &:nth-last-child(1) {
+                        width: 190px;
+                        padding-left: 10px;
+                    }
+                }
+        
+            }
+
+            .date-input-error {
+                gap: 60px;
+            }
+           
+        }
+
+        button {
+            width: 382px;
+        }
+    } 
+}
