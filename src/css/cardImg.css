@@ -1,0 +1,129 @@
+.card-image {
+    background-image: url("/images/bg-main-mobile.png");
+    position: relative;
+    width: 100%;
+    height: 240px;
+
+    .card-back {
+        background-image: url("/images/bg-card-back.png");
+        background-size: cover;
+        border-radius: 10px;
+        position: relative;
+        top: 30px;
+        left: 70px;
+        width: 287px;
+        height: 160px;
+        padding: 69px 32px 69px 228px;
+
+        p {
+            font-size: 14px;
+            color: white;
+        }
+    }
+
+    .card-frond {
+        background-image: url("/images/bg-card-front.png");
+        background-size: cover;
+        position: absolute;
+        left: 17px;
+        top: 125px;
+        width: 287px;
+        height: 160px;
+        border-radius: 10px;
+        color: white;
+        padding: 20px;
+    }
+    
+    .card-logo {
+        img {
+            width: 57px;
+            height: 33px;
+        }
+    }
+
+    .card-number {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 2.4px;
+        padding: 27px 0 20px 0;
+    }
+
+    article {
+        display: flex;
+        justify-content: space-between;
+
+        h2, p {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .card-image {
+        height: 100dvh;
+        background-image: url("/images/bg-main-desktop.png");
+        background-size: cover;
+
+        .card-back {
+            width: 448px;
+            height: 248px;
+            top: 465px;
+            left: 40px;
+            padding: 110px 56px 110px 355px;
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .card-frond {
+            left: 10px;
+            top: 185px;
+            width: 448px;
+            height: 248px;
+            padding: 26px;
+        }
+
+        .card-logo {
+            img {
+                width: unset;
+                height: unset;
+            }
+        }
+    
+        .card-number {
+            font-size: 28px;
+            padding: 56px 0 34px 0;
+        }
+    
+        article {
+    
+            h2, p {
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .card-image {
+        width: 480px;
+
+        .card-back {
+            left: 250px;
+        }
+
+        .card-frond {
+            left: 160px;
+        }
+
+    }
+}
