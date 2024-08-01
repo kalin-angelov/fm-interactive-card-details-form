@@ -2,6 +2,10 @@ import { useState } from "react";
 
 const Form = () => {
     const [errorMes, setErrorMes] = useState<string>("");
+    const [cardHolder, setCardHolder] = useState<string>("");
+    const [cardNumber, setCardNumber] = useState<number>(0);
+    const [cadDate, setCardDate] = useState<number>(0);
+    const [cardCVC, setCardCVC] = useState<number>(0);
 
     return (
         <form>
@@ -12,7 +16,8 @@ const Form = () => {
                     type="text" 
                     id="card" 
                     placeholder="e.g. Jane Applessed" 
-                    
+                    value={cardHolder}
+                    onChange={(e) => setCardHolder(e.target.value)}
                 />
                 <p className="error">Error</p>
             </fieldset>
