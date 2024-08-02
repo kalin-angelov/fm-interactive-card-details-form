@@ -1,49 +1,59 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
+import { FormState } from "../types/formState";
+
 const Form = () => {
     const [errorMes, setErrorMes] = useState<string>("");
-    const [cardHolder, setCardHolder] = useState<string>("");
-    const [cardNumber, setCardNumber] = useState<number | string>("");
-    const [cardDateMonth, setCardDateMonth] = useState<number | string>("");
-    const [cardDateYear, setCardDateYear] = useState<number | string>("");
-    const [cardCVC, setCardCVC] = useState<number | string>("");
 
-    const onSubmit = (e :FormEvent) => {
+    const [formData, setFormData] = useState<FormState>({
+        cardHolder: "",
+        cardNumber: "",
+        cardDateMonth: "",
+        cardDateYear: "",
+        cardCVC: ""
+    });
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData((data) => ({
+            ...data,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = (e :FormEvent) => {
         e.preventDefault();
-        console.log(cardHolder);
-        console.log(cardNumber);
-        console.log(cardDateMonth);
-        console.log(cardDateYear);
-        console.log(cardCVC);
     };
 
  
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
 
             <fieldset className="card-user-field">
-                <label htmlFor="card">Card holder name</label>
+                <label htmlFor="cardHolder">Card holder name</label>
                 <input 
                     type="text" 
-                    id="card" 
+                    id="cardHolder" 
+                    name="cardHolder"
                     placeholder="e.g. Jane Applessed" 
-                    value={cardHolder}
-                    onChange={(e) => setCardHolder(e.target.value)}
+                    value={formData.cardHolder}
+                    onChange={handleChange}
                 />
                 <p className="error">Error</p>
             </fieldset>
             
 
             <fieldset className="card-number-field">
-                <label htmlFor="number">card number</label>
+                <label htmlFor="cardNumber">card number</label>
                 <input 
                     type="tel"
                     inputMode="numeric"
                     maxLength={16}
-                    id="number" 
+                    id="cardNumber" 
+                    name="cardNumber"
                     placeholder="e.g. 1234 5678 9123 0000"
-                    value={cardNumber}
-                    onChange={(e) => setCardNumber(e.target.value)}
+                    value={formData.cardNumber}
+                    onChange={handleChange}
                 />
                 <p className="error">Error</p>
             </fieldset>
@@ -52,7 +62,7 @@ const Form = () => {
 
                 <div className="labels">
                     <label htmlFor="mm-yy">ext. date (mm/yy)</label>
-                    <label htmlFor="cvc">CVC</label>
+                    <label htmlFor="cardCVC">CVC</label>
                 </div>
 
                 <div className="inputs">
@@ -60,30 +70,33 @@ const Form = () => {
                     <input 
                         type="tel" 
                         id="mm" 
+                        name="cardDateMonth"
                         placeholder="MM"
                         maxLength={2}
                         inputMode="numeric"
-                        value={cardDateMonth}
-                        onChange={(e) => setCardDateMonth(e.target.value)}
+                        value={formData.cardDateMonth}
+                        onChange={handleChange}
                     />
                     <input 
                         type="tel" 
                         id="yy" 
+                        name="cardDateYear"
                         placeholder="YY"
                         maxLength={2}
                         inputMode="numeric"
-                        value={cardDateYear}
-                        onChange={(e) => setCardDateYear(e.target.value)}
+                        value={formData.cardDateYear}
+                        onChange={handleChange}
                     />
 
                     <input 
                         type="tel" 
                         id="cvc" 
+                        name="cardCVC"
                         placeholder="e.g. 123"
                         maxLength={3}
                         inputMode="numeric"
-                        value={cardCVC}
-                        onChange={(e) => setCardCVC(e.target.value)}
+                        value={formData.cardCVC}
+                        onChange={handleChange}
                     />
 
                 </div>
@@ -96,7 +109,7 @@ const Form = () => {
                 
             </fieldset>
             
-            <button type="submit" onSubmit={onSubmit}>Confirm</button>
+            <button type="submit">Confirm</button>
 
         </form>
     );
