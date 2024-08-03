@@ -1,30 +1,10 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { useState, useContext } from "react";
 
-import { FormState } from "../types/formState";
+import { Context } from "../context/Context";
 
 const Form = () => {
+    const { formData, setFormData, handleChange, handleSubmit } = useContext(Context);
     const [errorMes, setErrorMes] = useState<string>("");
-
-    const [formData, setFormData] = useState<FormState>({
-        cardHolder: "",
-        cardNumber: "",
-        cardDateMonth: "",
-        cardDateYear: "",
-        cardCVC: ""
-    });
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormData((data) => ({
-            ...data,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = (e :FormEvent) => {
-        e.preventDefault();
-    };
-
  
     return (
         <form onSubmit={handleSubmit}>
