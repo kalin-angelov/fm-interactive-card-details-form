@@ -1,9 +1,6 @@
 import { useState, useContext } from "react";
 
-import { Context } from "../context/Context";
-
 const Form = () => {
-    const { formData, setFormData, handleChange, handleSubmit } = useContext(Context);
     const [errorMes, setErrorMes] = useState<string>("");
  
     return (
