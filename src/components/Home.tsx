@@ -1,14 +1,12 @@
-import { ChangeEvent, FormEvent, useState, useContext, FC } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 import { FormState } from "../types/formState";
-import { AppProviderProps } from "../types/appProviderProps";
-import { Context } from "../context/Context";
 
 import Form from "./Form";
 import CardImg from "./CardImg";
 import Message from "./Message";
 
-const Home: FC<AppProviderProps> = () => {
+const Home = () => {
     const [cardNumber, setCardNumber] = useState<number>(0)
     const [compleat, setcompleat] = useState<boolean>(false);
     const [formData, setFormData] = useState<FormState>({
@@ -31,25 +29,16 @@ const Home: FC<AppProviderProps> = () => {
         e.preventDefault();
     };
 
-    const initialValue = {
-        formData, 
-        setFormData, 
-        handleChange, 
-        handleSubmit,
-    };
-
     return (
-        <Context.Provider value={initialValue}>
-            <main>
+        <main>
 
-                <CardImg />
+            <CardImg />
 
-                {
-                    compleat ? <Message /> : <Form />
-                }
-        
-            </main>
-        </Context.Provider>
+            {
+                compleat ? <Message /> : <Form />
+            }
+    
+        </main>
     );
 };
 
