@@ -1,21 +1,35 @@
-const Message = () => {
-  return (
+import { FormProps } from "../types/formType";
 
-    <section className="message">
+const Message = ( { setCompleat, setFormData } : FormProps) => {
+  
+    const onClick = () => {
+        setCompleat(false);
+        setFormData({
+            cardHolder: "",
+            cardNumber: "",
+            cardDateMonth: "",
+            cardDateYear: "",
+            cardCVC: ""
+        })
+    };
 
-        <figure>
-            <img src="/images/icon-complete.svg" alt="check" />
-        </figure>
+    return (
 
-        <h2>Thank you!</h2>
+        <section className="message">
 
-        <p>We,ve added your card details</p>
+            <figure>
+                <img src="/images/icon-complete.svg" alt="check" />
+            </figure>
 
-        <button>Continue</button>
+            <h2>Thank you!</h2>
 
-    </section>
+            <p>We,ve added your card details</p>
 
-  );
+            <button type="button" onClick={onClick}>Continue</button>
+
+        </section>
+
+    );
 };
 
 export default Message;
