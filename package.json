@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -24,5 +25,17 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
-  }
+  },
+  "description": "This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalin-angelov/fm-interactive-card-details-form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalin-angelov/fm-interactive-card-details-form/issues"
+  },
+  "homepage": "https://github.com/kalin-angelov/fm-interactive-card-details-form#readme"
 }
