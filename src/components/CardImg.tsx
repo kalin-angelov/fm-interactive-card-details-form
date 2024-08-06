@@ -18,7 +18,7 @@ const CardImg = ({ formData }: User) => {
             <div className="card-frond">
                 
                 <figure className="card-logo">
-                    <img src="/public/images/card-logo.svg" alt="card logo" />
+                    <img src="/images/card-logo.svg" alt="card logo" />
                 </figure>
 
                 <h1 className="card-number">{cardNumber === "" ? "0000 0000 0000 0000" : cardNum}</h1>
