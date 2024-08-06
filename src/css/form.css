@@ -56,20 +56,21 @@ form {
         .inputs {
             display: flex;
             gap: 10px;
-            input {
-                width: 70px;
+
+            .date {
+                input {
+                    width: 70px;
+                }
+
                 &:nth-last-child(1) {
-                    width: 163px;
+                    input {
+                        width: 163px;
+                    }
+                    
                 }
             }
     
         }
-
-        .date-input-error {
-            display: flex;
-            gap: 50px;
-        }
-
     }
 
     button {
@@ -107,22 +108,19 @@ form {
             }
     
             .inputs {
-                display: flex;
-                gap: 10px;
-                input {
-                    width: 80px;
+
+                .date {
+                    input {
+                        width: 80px;
+                    }
                     &:nth-last-child(1) {
-                        width: 190px;
-                        padding-left: 10px;
+                        input {
+                            width: 190px;
+                            padding-left: 10px;
+                        }
                     }
                 }
-        
             }
-
-            .date-input-error {
-                gap: 60px;
-            }
-           
         }
 
         button {
