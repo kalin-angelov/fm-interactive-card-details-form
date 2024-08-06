@@ -28,25 +28,25 @@ Users should be able to:
 
 ### Screenshot
 
-
+![Desktop screenshot](./screenshot/screenshot%20-1.png)
+![Mobile screenshot](./screenshot/screenshot%20-2.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL click here](https://fm-multi-step-form-six.vercel.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- Sass/Scss
+- CSS
 - Flexbox
+- TypeScript
+- useForm
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@kalin-angelov](https://www.frontendmentor.io/profile/kalin-angelov)
